@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flappy Bird HTML5</title>
+  <meta name="viewport" content="width=device-width">
+  <style>
+  body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000;
+  }
+  #screen canvas{
+    margin: 0 auto;
+  }
+  #github{
+    position:absolute;
+    bottom: 5px;
+    right:5px;
+  }
+  #loading{
+    position: absolute;
+    font-family: "Verdana";
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    top: 50%;
+  }
+  
+  /* Credits sit in the black letterbox space outside the game canvas. */
+  #credits{position:fixed;inset:0;z-index:5;pointer-events:none;color:#e9e5f0;font:14px/1.65 Arial,sans-serif}
+  .credit-rail{position:absolute;top:0;bottom:0;width:calc(50vw - min(50vw, 37.5vh));box-sizing:border-box;display:flex;align-items:center;padding:clamp(14px,2vw,38px)}
+  #credit-left{left:0;justify-content:flex-end}
+  #credit-right{right:0;justify-content:flex-start}
+  .credit-copy{width:100%;max-width:280px;color:#bcb7c8}
+  .credit-copy h2{margin:0 0 18px;color:#fff;font-size:18px;letter-spacing:.08em;text-transform:uppercase}
+  .credit-copy h3{margin:0 0 4px;color:#c8a9ff;font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+  .credit-copy p{margin:0 0 18px}
+  .credit-copy a,#credits-mobile a{color:#fff;text-decoration:underline;text-decoration-color:#a984e8;text-underline-offset:3px;pointer-events:auto}
+  #credits-mobile{display:none}
+  @media(max-aspect-ratio:1/1){
+    .credit-rail{padding:10px;font-size:11px}
+    .credit-copy h2{font-size:14px;margin-bottom:10px}
+    .credit-copy p{margin-bottom:10px}
+  }
+  </style>
+</head>
+<body>
+<div id="loading">Loading...</div>
+<div id="screen"></div>
+<div id="github"></div>
+<div id="credits" aria-label="Game credits">
+  <aside id="credit-left" class="credit-rail">
+    <div class="credit-copy">
+      <h2>Credits</h2>
+      <h3>Game</h3>
+      <p>Forked from <a href="https://github.com/infoekcz/Flappy-Bird-HTML5/" target="_blank" rel="noopener noreferrer">infoekcz/Flappy-Bird-HTML5</a>, itself a fork of <a href="https://github.com/hyspace/flappy" target="_blank" rel="noopener noreferrer">hyspace/flappy by Shan Zhou</a> (MIT License).</p>
+    </div>
+  </aside>
+  <aside id="credit-right" class="credit-rail">
+    <div class="credit-copy">
+      <h3>Character artwork &amp; animation</h3>
+      <p>Artwork drawn and animated by <a href="https://folly.milktruckers.com/" target="_blank" rel="noopener noreferrer">Darcie</a>, commissioned by <a href="https://www.youtube.com/@XayXayYT" target="_blank" rel="noopener noreferrer">XayXay</a>.</p>
+      <p>Fan-made project.</p>
+    </div>
+  </aside>
+</div>
+<script src="index.min.js?v=character-25fps"></script>
+<script defer src="https://analytics.oscloud.cz/script.js" data-website-id="580f0fe8-fcba-41fe-82fa-20c363d11e99"></script>
+</script>
+</html>
+
+
+
+
