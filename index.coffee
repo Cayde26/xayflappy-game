@@ -227,13 +227,10 @@ main = ->
     bird.animations.add "fly", [0..26], 25, true
     bird.body.collideWorldBounds = true
     bird.body.setPolygon(
-      4,2,
-      44,2,
-      47,17,
-      39,30,
-      25,33,
-      8,29,
-      1,14
+      0,0,
+      48,0,
+      48,34,
+      0,34
     )
 
     # Add ground
@@ -395,3 +392,4 @@ WebFontConfig =
   s = document.getElementsByTagName('script')[0]
   s.parentNode.insertBefore(wf, s)
 )()
+
